@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Play:wght@400;700&family=Playwrite+AR:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(-25deg, #416788 10%, #1d2834 100%);
+    font-family: "Play", sans-serif;
+    transition: 1s;
+}
+body.active
+{
+    animation: resplador 3s;
+    background: linear-gradient(-25deg, #416788 10%, #1d2834 100%);
+}
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+.container .message
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    height: 50vh;
+}
+.container .message h1
+{
+    margin: 0;
+    color: #eaeff4;
+    font-family: "Dancing Script", cursive;
+    font-size: 5em;
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 0 0 1px #eaeff4,
+    0 0 5px #cfdce8,
+    0 0 10px #a6bfd3,
+    0 0 15px #759cbb;
+}
+.container .message p
+{
+    margin: 0;
+    width: 100vh;
+    font-size: 16px;
+    color: linear-gradient(145deg, #a1c4fd, #c2e9fb);
+    text-shadow: 0 0 5px #a1c4fd;
+}
+.balloons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: max-content;
+    transform: translateX(25px);
+}
+
+.balloon {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    border-radius: 100%;
+    animation: float 3s ease-in-out infinite;
+
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.balloon1 {
+    position: relative;
+    left: 10%;
+    animation-delay: 0s;
+    background: linear-gradient(145deg, #ff7eb3, #ff758c);
+    box-shadow: 0px 0px 50px #ff758c;
+}
+
+.balloon2 {
+    position: relative;
+    left: 30%;
+    animation-delay: 0.5s;
+    background: linear-gradient(145deg, #a1c4fd, #c2e9fb);
+    box-shadow: 0px 0px 50px #a1c4fd;
+}
+
+.balloon3 {
+    position: relative;
+    left: 50%;
+    animation-delay: 1s;
+    background: linear-gradient(145deg, #fbc2eb, #a6c1ee);
+    box-shadow: 0px 0px 50px #fbc2eb;
+}
+
+.balloon4 {
+    position: relative;
+    left: 70%;
+    animation-delay: 1.5s;
+    background: linear-gradient(145deg, #ffecd2, #fcb69f);
+    box-shadow: 0px 0px 50px #ffecd2;
+}
+
+.balloon5 {
+    position: relative;
+    left: 90%;
+    animation-delay: 2s;
+    background: linear-gradient(145deg, #ff7e5f, #feb47b);
+    box-shadow: 0px 0px 50px #ff7e5f;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes resplador {
+    0%{
+        background: white;
+    }
+    50%{
+        background: #416788;
+    }
+    100%{
+        background: #1d2834;
+    }
+}
+button {
+    background: #1d283431;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-family: "Play", sans-serif;
+}
+
+button:hover {
+    background: #1d2834a9;
+}
+
+.hidden {
+    display: none;
+}
+
+#surprise {
+    margin-top: 20px;
+}
+.cart 
+{
+    display: none;
+    height: 80%;
+    width: 450px;
+    padding: 1.5em;
+}
+.cart .texto
+{
+    color: white;
+    font-size: 17px;
+    text-shadow: 0 0 5px wheat;
+}
+img 
+{
+    display: none;
+    position: absolute;
+    z-index: -2;
+    height: 100%;
+    width: auto;
+}
