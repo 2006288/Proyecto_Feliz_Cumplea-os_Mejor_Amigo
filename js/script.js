@@ -60,7 +60,7 @@ function escribir(texto) {
         {
             document.getElementById('pastel').style.display = 'flex';
             document.getElementById('Belas').style.display = 'flex';
-            audio.volume = 0.25;
+            audio.volume = 0.5;
             audio.play();
         }
     }
