@@ -348,14 +348,14 @@ img.pastel
     }
     .cart .texto
     {
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .Belas .BelaIzquierda
     {
         position: absolute;
         height: auto;
         width: 100%;
-        top: 5%;
+        top: 3%;
         left: 0;
         display: flex;
         flex-direction: row;
@@ -367,7 +367,7 @@ img.pastel
         position: absolute;
         height: auto;
         width: 100%;
-        bottom: 5%;
+        bottom: 3%;
         left: 0;
         display: flex;
         flex-direction: row;

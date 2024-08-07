@@ -4,7 +4,6 @@ function anchoPagina(){
     var anchoVentana = window.innerWidth;
     var altoVentana = window.innerHeight;
     if(window.innerWidth < 768){
-        console.log("hola");
         var fondo = document.getElementById('fondo');
         var container = document.getElementById('container');
         restaAncho = anchoVentana - 20;
