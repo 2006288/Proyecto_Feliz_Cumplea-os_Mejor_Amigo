@@ -375,3 +375,10 @@ img.pastel
         transform: scale(0.8);
     }
 }
+@media screen and (max-width: 500px)
+{
+    .cart .texto
+    {
+        font-size: 0.5em;
+    }
+}
