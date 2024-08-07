@@ -360,7 +360,7 @@ img.pastel
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        transform: scale(0.8);
+        transform: scale(0.7);
     }
     .Belas .BelaDerecha
     {
@@ -372,7 +372,7 @@ img.pastel
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        transform: scale(0.8);
+        transform: scale(0.7);
     }
 }
 @media screen and (max-width: 500px)

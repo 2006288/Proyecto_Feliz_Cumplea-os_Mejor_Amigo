@@ -47,7 +47,7 @@ function escribir(texto) {
                     if (charIndex < segment.length) {
                         container.innerHTML += segment.charAt(charIndex);
                         charIndex++;
-                        setTimeout(typeChar, 1); // Ajusta la velocidad aquí (en milisegundos)
+                        setTimeout(typeChar, 15); // Ajusta la velocidad aquí (en milisegundos)
                     } else {
                         typeSegment(segmentIndex + 1);
                     }
