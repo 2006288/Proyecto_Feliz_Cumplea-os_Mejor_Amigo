@@ -348,7 +348,7 @@ img.pastel
     }
     .cart .texto
     {
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
     .Belas .BelaIzquierda
     {
@@ -373,12 +373,5 @@ img.pastel
         flex-direction: row;
         justify-content: space-around;
         transform: scale(0.7);
-    }
-}
-@media screen and (max-width: 500px)
-{
-    .cart .texto
-    {
-        font-size: 0.5em;
     }
 }
