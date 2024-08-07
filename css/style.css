@@ -6,14 +6,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(-25deg, #416788 10%, #1d2834 100%);
+    background: linear-gradient(-25deg, #2C3E50 20%, #4CA1AF);
     font-family: "Play", sans-serif;
     transition: 1s;
 }
 body.active
 {
     animation: resplador 3s;
-    background: linear-gradient(-25deg, #416788 10%, #1d2834 100%);
+    background: linear-gradient(25deg, #2C3E50 20%, #4CA1AF);
 }
 .container {
     text-align: center;
@@ -31,7 +31,7 @@ body.active
 .container .message h1
 {
     margin: 0;
-    color: #eaeff4;
+    color: #ECF0F1;
     font-family: "Dancing Script", cursive;
     font-size: 5em;
     text-align: center;
@@ -46,7 +46,7 @@ body.active
     margin: 0;
     width: 100vh;
     font-size: 16px;
-    color: linear-gradient(145deg, #a1c4fd, #c2e9fb);
+    color: wheat;
     text-shadow: 0 0 5px #a1c4fd;
 }
 .balloons {
@@ -83,8 +83,8 @@ body.active
     position: relative;
     left: 10%;
     animation-delay: 0s;
-    background: linear-gradient(145deg, #ff7eb3, #ff758c);
-    box-shadow: 0px 0px 50px #ff758c;
+    background: linear-gradient(145deg, #c2e9fb, #58D68D);
+    box-shadow: 0px 0px 50px #a1c4fd;
 }
 
 .balloon2 {
@@ -135,11 +135,36 @@ body.active
     0%{
         background: white;
     }
-    50%{
-        background: #416788;
+    35%{
+        background: #4CA1AF;
+    }
+    70%{
+        background: #2C3E50;
     }
     100%{
-        background: #1d2834;
+        background: linear-gradient(25deg, #2C3E50 20%, #4CA1AF);
+    }
+}
+@keyframes opaco {
+    0%{
+        filter: opacity(0%);
+    }
+    50%{
+        filter: opacity(50%);
+    }
+    100%{
+        filter: opacity(100%);
+    }
+}
+@keyframes encender{
+    0%{
+        transform: translateX(-9px) translateY(-40px) scale(1);
+    }
+    50%{
+        transform: translateX(-9px) translateY(-43px) scale(1.2);
+    }
+    100%{
+        transform: translateX(-9px) translateY(-40px) scale(1);
     }
 }
 button {
@@ -174,15 +199,175 @@ button:hover {
 }
 .cart .texto
 {
-    color: white;
+    color: #fbbf24;
     font-size: 17px;
-    text-shadow: 0 0 5px wheat;
+    text-shadow: 1px 1px 1px #451a03,
+    -1px -1px 1px black;
 }
-img 
+img.pastel
 {
     display: none;
     position: absolute;
-    z-index: -2;
+    z-index: -1;
     height: 100%;
     width: auto;
+    animation: opaco 3s;
+    -webkit-mask-image: linear-gradient(to right,transparent,black,black,transparent);
+}
+.Belas
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    align-items: center;
+}
+.Belas .BelaIzquierda
+{
+    position: absolute;
+    left: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+.Belas .BelaIzquierda .Bela1
+{
+    width: 38px;
+    height: 90px;
+    background: linear-gradient(var(--color1), var(--color2));
+    border-radius: 10px;
+    position: relative;
+    animation: opaco 3s;
+}
+.Belas .BelaIzquierda .Bela1::before
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 30px;
+    background: radial-gradient(yellow,orange,yellow);
+    border-radius: 50%;
+    transform: translateX(-9px) translateY(-40px);
+    box-shadow: 0 0 5px yellow,
+    0 0 15px yellow,
+    0 0 25px orange;
+    animation: encender 3s infinite;
+    animation-delay: var(--deley);
+}
+.Belas .BelaIzquierda .Bela1::after
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 12px;
+    background: linear-gradient(black,#00000000);
+    transform: translateX(-1px) translateY(-12px);
+    z-index: -1;
+}
+.Belas .BelaDerecha
+{
+    position: absolute;
+    right: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+.Belas .BelaDerecha .Bela2
+{
+    width: 38px;
+    height: 90px;
+    background: linear-gradient(var(--color2), var(--color1));
+    border-radius: 10px;
+    position: relative;
+    animation: opaco 3s;
+}
+.Belas .BelaDerecha .Bela2::before
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 30px;
+    background: radial-gradient(yellow,orange,yellow);
+    border-radius: 50%;
+    transform: translateX(-9px) translateY(-40px);
+    box-shadow: 0 0 5px yellow,
+    0 0 15px yellow,
+    0 0 25px orange;
+    animation: encender 3s infinite;
+    animation-delay: var(--deley);
+}
+.Belas .BelaDerecha .Bela2::after
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 12px;
+    background: linear-gradient(black,#00000000);
+    transform: translateX(-1px) translateY(-12px);
+    z-index: -1;
+}
+@media screen and (max-width: 768px)
+{
+    body
+    {
+        height: var(--alto);
+        width: var(--ancho);
+    }
+    .container
+    {
+        width: var(--ancho);
+        transform: scale(0.7);
+    }
+    .balloons {
+        transform: scale(0.9);
+        transform: translateX(-50px);
+    }
+    img.pastel
+    {
+        display: none;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        animation: opaco 3s;
+        -webkit-mask-image: linear-gradient(to top,transparent,black,black,transparent);
+    }
+    .cart
+    {
+        transform: scale(0.9);
+    }
+    .Belas .BelaIzquierda
+    {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        top: 40px;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transform: scale(0.7);
+    }
+    .Belas .BelaDerecha
+    {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        bottom: 20px;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transform: scale(0.7);
+    }
 }

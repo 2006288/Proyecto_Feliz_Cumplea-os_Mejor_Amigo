@@ -12,6 +12,7 @@ function ocultar() {
 
 function escribir(texto) {
     const container = document.getElementById("texto");
+    var audio = document.getElementById('Musica');
     container.innerHTML = "";
     let index = 0;
     const regex = /(<[^>]+>|[^<]+)/g;
@@ -30,7 +31,7 @@ function escribir(texto) {
                     if (charIndex < segment.length) {
                         container.innerHTML += segment.charAt(charIndex);
                         charIndex++;
-                        setTimeout(typeChar, 5); // Ajusta la velocidad aquí (en milisegundos)
+                        setTimeout(typeChar, 1); // Ajusta la velocidad aquí (en milisegundos)
                     } else {
                         typeSegment(segmentIndex + 1);
                     }
@@ -39,6 +40,12 @@ function escribir(texto) {
                 return; // Salir de typeSegment para esperar que typeChar termine
             }
             typeSegment(segmentIndex + 1);
+        }else
+        {
+            document.getElementById('pastel').style.display = 'flex';
+            document.getElementById('Belas').style.display = 'flex';
+            audio.volume = 0.25;
+            audio.play();
         }
     }
     typeSegment(0);
