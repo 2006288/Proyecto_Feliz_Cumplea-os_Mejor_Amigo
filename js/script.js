@@ -1,3 +1,19 @@
+window.addEventListener("resize", anchoPagina);
+
+function anchoPagina(){
+    var anchoVentana = window.innerWidth;
+    var altoVentana = window.innerHeight;
+    if(window.innerWidth < 768){
+        console.log("hola");
+        var fondo = document.getElementById('fondo');
+        var container = document.getElementById('container');
+        restaAncho = anchoVentana - 20;
+        restaAlto = altoVentana - 20;
+        fondo.setAttribute("style",`--alto:${altoVentana}px; --ancho:${anchoVentana}px;`);
+        container.setAttribute("style",`--alto:${restaAlto}px; --ancho:${restaAncho}px;`);
+    }
+}
+
 function ocultar() {
     var container = document.getElementById('container');
     var cart = document.getElementById('cart');
@@ -50,3 +66,4 @@ function escribir(texto) {
     }
     typeSegment(0);
 }
+anchoPagina();
