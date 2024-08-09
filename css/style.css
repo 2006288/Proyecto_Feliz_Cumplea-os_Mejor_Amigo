@@ -46,7 +46,7 @@ body.active
     margin: 0;
     width: 100vh;
     font-size: 16px;
-    color: wheat;
+    color: white;
     text-shadow: 0 0 5px #a1c4fd;
 }
 .balloons {
@@ -163,6 +163,24 @@ body.active
         transform: translateX(-9px) translateY(-40px) scale(1);
     }
 }
+@keyframes cambioImagen{
+    0%{
+        background-image: url('../img/V_9.jpeg');
+    }
+    25%
+    {
+        background-image: url('../img/V_6.jpeg');
+    }
+    50%{
+        background-image: url('../img/V_7.jpeg');
+    }
+    75%{
+        background-image: url('../img/V_8.jpeg');
+    }
+    100%{
+        background-image: url('../img/V_9.jpeg');
+    }
+}
 button {
     background: #1d283431;
     border: none;
@@ -200,15 +218,18 @@ button:hover {
     text-shadow: 1px 1px 1px #451a03,
     -1px -1px 1px black;
 }
-img.pastel
+.pastel
 {
     display: none;
     position: absolute;
     z-index: -1;
     height: 100%;
-    width: auto;
-    animation: opaco 3s;
-    -webkit-mask-image: linear-gradient(to right,transparent,black,black,transparent);
+    width: 45%;
+    animation: cambioImagen 15s infinite,opaco 3s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-mask-image: linear-gradient(to left,transparent,black,black,transparent);
 }
 .Belas
 {
@@ -316,39 +337,47 @@ img.pastel
 {
     .container
     {
-        width: var(--ancho);
+        width: max-content;
         transform: scale(0.7);
     }
     .balloons {
-        width: 100%;
-        transform: translateX(1%)scale(0.85);
+        width: 110%;
+        transform: translateX(-4%)scale(0.85);
     }
     .container .message p
     {
         margin: 0;
         width: 105%;
-        font-size: 16px;
-        color: wheat;
+        font-size: 15px;
+        color: white;
         text-shadow: 0 0 5px #a1c4fd;
     }
-    img.pastel
+    .pastel
     {
         display: none;
         position: absolute;
         z-index: -1;
+        height: 90%;
         width: 100%;
-        height: 100%;
-        animation: opaco 3s;
+        animation: cambioImagen 15s infinite,opaco 3s;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
         -webkit-mask-image: linear-gradient(to top,transparent,black,black,transparent);
     }
     .cart
     {
-        transform: scale(0.9);
         align-items: center;
+        width: var(--ancho);
+        padding: 0;
     }
     .cart .texto
     {
-        font-size: 0.9em;
+        font-size: 0.7em;
+    }
+    .Belas
+    {
+        width: 80%;
     }
     .Belas .BelaIzquierda
     {
@@ -360,18 +389,26 @@ img.pastel
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        transform: scale(0.7);
+    }
+    .Belas .BelaIzquierda .Bela1
+    {
+        transform: scale(0.5);
+        z-index: -1;
     }
     .Belas .BelaDerecha
     {
         position: absolute;
         height: auto;
         width: 100%;
-        bottom: 3%;
+        bottom: -3%;
         left: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        transform: scale(0.7);
+    }
+    .Belas .BelaDerecha .Bela2
+    {
+        transform: scale(0.5);
+        z-index: -1;
     }
 }

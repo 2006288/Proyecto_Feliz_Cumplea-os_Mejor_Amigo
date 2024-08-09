@@ -6,10 +6,16 @@ function anchoPagina(){
     if(window.innerWidth < 768){
         var fondo = document.getElementById('fondo');
         var container = document.getElementById('container');
-        restaAncho = anchoVentana - 20;
-        restaAlto = altoVentana - 20;
+        var cart = document.getElementById('cart');
+        restaAncho = anchoVentana;
+        restaAlto = altoVentana;
         fondo.setAttribute("style",`--alto:${altoVentana}px; --ancho:${anchoVentana}px;`);
         container.setAttribute("style",`--alto:${restaAlto}px; --ancho:${restaAncho}px;`);
+        cart.setAttribute("style",`--alto:${restaAlto-60}px; --ancho:${restaAncho-60}px;`);
+    }
+    else{
+        var pastel = document.getElementById('pastel');
+        pastel.setAttribute("style",`--alto:${altoVentana}px; --ancho:${anchoVentana}px;`);
     }
 }
 
@@ -46,7 +52,7 @@ function escribir(texto) {
                     if (charIndex < segment.length) {
                         container.innerHTML += segment.charAt(charIndex);
                         charIndex++;
-                        setTimeout(typeChar, 1); // Ajusta la velocidad aquí (en milisegundos)
+                        setTimeout(typeChar, 20); // Ajusta la velocidad aquí (en milisegundos)
                     } else {
                         typeSegment(segmentIndex + 1);
                     }
