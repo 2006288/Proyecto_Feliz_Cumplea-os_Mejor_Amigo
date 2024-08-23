@@ -1,39 +1,19 @@
-window.addEventListener("resize", anchoPagina);
-
-function anchoPagina(){
-    var anchoVentana = window.innerWidth;
-    var altoVentana = window.innerHeight;
-    if(window.innerWidth < 768){
-        var fondo = document.getElementById('fondo');
-        var container = document.getElementById('container');
-        var cart = document.getElementById('cart');
-        restaAncho = anchoVentana;
-        restaAlto = altoVentana;
-        fondo.setAttribute("style",`--alto:${altoVentana}px; --ancho:${anchoVentana}px;`);
-        container.setAttribute("style",`--alto:${restaAlto}px; --ancho:${restaAncho}px;`);
-        cart.setAttribute("style",`--alto:${restaAlto-60}px; --ancho:${restaAncho-60}px;`);
-    }
-    else{
-        var pastel = document.getElementById('pastel');
-        pastel.setAttribute("style",`--alto:${altoVentana}px; --ancho:${anchoVentana}px;`);
-    }
-}
-
-function ocultar() {
-    var container = document.getElementById('container');
-    var cart = document.getElementById('cart');
-    var texto = document.getElementById('texto');
-    var fondo = document.getElementById('fondo');
-    container.style.display = "none";
-    cart.style.display = "flex";
+setTimeout(function(){
+    const fondo = document.getElementById('fondo');
+    const cart = document.getElementById('cart');
+    const fondos_img = document.getElementById('fondos_img');
+    const globos_cart = document.getElementById('globos_cart');
     fondo.classList.add('active');
-    var text = texto.innerHTML;
-    escribir(text);
-}
+    cart.classList.add('active');
+    fondos_img.classList.add('active');
+    globos_cart.classList.add('active');
+    escribir();
+},3500);
 
-function escribir(texto) {
+function escribir() {
     const container = document.getElementById("texto");
-    var audio = document.getElementById('Musica');
+    const audio = document.getElementById('Musica');
+    const texto = container.innerHTML
     container.innerHTML = "";
     let index = 0;
     const regex = /(<[^>]+>|[^<]+)/g;
@@ -52,7 +32,7 @@ function escribir(texto) {
                     if (charIndex < segment.length) {
                         container.innerHTML += segment.charAt(charIndex);
                         charIndex++;
-                        setTimeout(typeChar, 20); // Ajusta la velocidad aquí (en milisegundos)
+                        setTimeout(typeChar, 40); // Ajusta la velocidad aquí (en milisegundos) 40
                     } else {
                         typeSegment(segmentIndex + 1);
                     }
@@ -63,12 +43,9 @@ function escribir(texto) {
             typeSegment(segmentIndex + 1);
         }else
         {
-            document.getElementById('pastel').style.display = 'flex';
-            document.getElementById('Belas').style.display = 'flex';
             audio.volume = 0.5;
             audio.play();
         }
     }
     typeSegment(0);
 }
-anchoPagina();
