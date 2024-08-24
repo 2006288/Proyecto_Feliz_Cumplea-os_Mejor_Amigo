@@ -13,12 +13,14 @@ body {
 }
 .fondo
 {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 .fondo.active
 {
@@ -235,6 +237,7 @@ body {
   opacity: 0;
   height: 90%;
   width: 33%;
+  overflow: hidden;
 }
 .cart.active
 {
@@ -255,6 +258,7 @@ body {
   opacity: 0;
   transition: 6s;
   transition-delay: 5s;
+  overflow: hidden;
 }
 .fondos_img.active
 {
@@ -308,10 +312,10 @@ body {
   height: 100%;
   width: 100%;
   z-index: 1;
+  overflow: hidden;
 }
 .globos_cart .i1
 {
-  position: absolute;
   top: 0;
   left: 0;
   transition: 5s;
@@ -325,7 +329,6 @@ body {
 }
 .globos_cart .i2
 {
-  position: absolute;
   top: 0;
   left: 0;
   transition: 5s;
@@ -340,7 +343,6 @@ body {
 }
 .globos_cart .i3
 {
-  position: absolute;
   top: 0;
   left: 0;
   transition: 5s;
@@ -355,7 +357,6 @@ body {
 }
 .globos_cart .i4
 {
-  position: absolute;
   top: 100%;
   left: 0;
   transition: 5s;
@@ -370,7 +371,6 @@ body {
 }
 .globos_cart .i5
 {
-  position: absolute;
   top: 100%;
   left: 0;
   transition: 5s;
@@ -385,7 +385,6 @@ body {
 }
 .globos_cart .i6
 {
-  position: absolute;
   top: 100%;
   left: 0;
   transition: 5s;
@@ -400,7 +399,6 @@ body {
 }
 .globos_cart .i7
 {
-  position: absolute;
   top: 100%;
   left: 0;
   transition: 6s;
@@ -409,7 +407,6 @@ body {
 }
 .globos_cart .d1
 {
-  position: absolute;
   top: 0;
   right: 0;
   transform: translateY(-100%) translateX(150%);
@@ -424,7 +421,6 @@ body {
 }
 .globos_cart .d2
 {
-  position: absolute;
   top: 0;
   right: 0;
   transform: translateY(-100%) translateX(150%);
@@ -439,7 +435,6 @@ body {
 }
 .globos_cart .d3
 {
-  position: absolute;
   top: 0;
   right: 0;
   transform: translateY(-100%) translateX(150%);
@@ -454,7 +449,6 @@ body {
 }
 .globos_cart .d4
 {
-  position: absolute;
   top: 100%;
   right: 0;
   transform: translateY(100%) translateX(150%);
@@ -469,7 +463,6 @@ body {
 }
 .globos_cart .d5
 {
-  position: absolute;
   top: 100%;
   right: 0;
   transform: translateY(100%) translateX(150%);
@@ -484,7 +477,6 @@ body {
 }
 .globos_cart .d6
 {
-  position: absolute;
   top: 100%;
   right: 0;
   transform: translateY(100%) translateX(150%);
@@ -499,7 +491,6 @@ body {
 }
 .globos_cart .d7
 {
-  position: absolute;
   top: 100%;
   right: 0;
   transform: translateY(100%) translateX(150%);
@@ -510,9 +501,7 @@ body {
 {
   body
   {
-    height: var(--alto);
-    width: var(--ancho);
-    overflow: hidden;
+    transform: scale(1);
   }
   .balloon
   {
@@ -523,6 +512,7 @@ body {
   {
     transform: scale(50%);
     z-index: 2;
+    background: red;
   }
   .cart
   {
