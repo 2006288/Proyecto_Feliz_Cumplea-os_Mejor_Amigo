@@ -505,109 +505,137 @@ body {
   }
   .balloon
   {
-    height: 20%;
-    width: 25%;
+    height: 15%;
+    width: 30%;
+  }
+  .fondo .i-abpd
+  {
+    top: 5%;
+  }
+  .fondo .d-abpb
+  {
+    top: 5%;
+  }
+    .fondo .d-abpn
+  {
+    top: 15%;
+  }
+  .fondo .i-bapb
+  {
+    bottom: 5%;
+  }
+  .fondo .i-bapn
+  {
+    bottom: 15%;
   }
   .fondo .texto
   {
-    transform: scale(50%);
+    transform: scale(60%);
     z-index: 2;
-    background: red;
   }
   .cart
   {
     height: 80%;
-    width: 48%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .cart .texto
   {
-    font-size: 80%;
+    font-size: 85%;
   }
   .globos_cart.active .i1
+  {
+    top: 7%;
+    left: 0;
+    transform: translateY(0) translateX(-30%);
+  }
+  .globos_cart.active .i2
   {
     top: 0;
     left: 0;
     transform: translateY(-20%) translateX(-25%);
-  }
-  .globos_cart.active .i2
-  {
-    top: 10%;
-    left: 6%;
-    transform: translateY(0) translateX(-25%);
+    z-index: 1;
   }
   .globos_cart.active .i3
   {
-    top: 25%;
-    left: 0;
-    transform: translateY(0) translateX(-25%);
+    top: 0;
+    left: 10%;
+    transform: translateY(-30%) translateX(0);
   }
   .globos_cart.active .i4
   {
-    top: 40%;
-    left: 6%;
-    transform: translateY(0) translateX(-25%);
+    top: initial;
+    bottom: 0;
+    left: 0;
+    transform: translateY(20%) translateX(-25%);
+    z-index: 1;
   }
   .globos_cart.active .i5
   {
-    top: 55%;
+    top: initial;
+    bottom: 7%;
     left: 0;
-    transform: translateY(0) translateX(-25%);
+    transform: translateY(0) translateX(-30%);
   }
   .globos_cart.active .i6
   {
-    top: 70%;
-    left: 6%;
-    transform: translateY(0) translateX(-25%);
+    display: none;
   }
   .globos_cart.active .i7
   {
-    top: 85%;
-    left: 0;
-    transform: translateY(0) translateX(-25%);
+    top: initial;
+    bottom: 0;
+    left: 10%;
+    transform: translateY(30%) translateX(0);
   }
   .globos_cart.active .d1
+  {
+    top: 7%;
+    right: 0;
+    transform: translateY(0) translateX(30%);
+  }
+  .globos_cart.active .d2
   {
     top: 0;
     right: 0;
     transform: translateY(-20%) translateX(25%);
-  }
-  .globos_cart.active .d2
-  {
-    top: 10%;
-    right: 6%;
-    transform: translateY(0) translateX(25%);
+    z-index: 1;
   }
   .globos_cart.active .d3
   {
-    top: 25%;
-    right: 0;
-    transform: translateY(0) translateX(25%);
+    top: 0;
+    right: 10%;
+    transform: translateY(-30%) translateX(0);
   }
   .globos_cart.active .d4
   {
-    top: 40%;
-    right: 6%;
-    transform: translateY(0) translateX(25%);
+    top: initial;
+    bottom: 0;
+    right: 0;
+    transform: translateY(20%) translateX(25%);
+    z-index: 1;
   }
   .globos_cart.active .d5
   {
-    top: 55%;
+    top: initial;
+    bottom: 7%;
     right: 0;
-    transform: translateY(0) translateX(25%);
+    transform: translateY(0) translateX(30%);
   }
   .globos_cart.active .d6
   {
-    top: 70%;
-    right: 6%;
-    transform: translateY(0) translateX(25%);
+    display: none;
   }
   .globos_cart.active .d7
   {
-    top: 85%;
-    right: 0;
-    transform: translateY(0) translateX(25%);
+    top: initial;
+    bottom: 0;
+    right: 10%;
+    transform: translateY(30%) translateX(0);
   }
-  @keyframes cambioImagen{
+  @keyframes cambioImagenP{
     0%{
       
     }
@@ -646,8 +674,9 @@ body {
   {
     height: 100%;
     width: 100%;
-    background-size: 75%;
+    background-position: center;
     background-image: url('../img/fondo_pantalla_1.jpg');
     -webkit-mask-image: linear-gradient(to top,transparent,black,black,transparent);
+    animation: cambioImagenP 25s infinite ;
   }
 }
