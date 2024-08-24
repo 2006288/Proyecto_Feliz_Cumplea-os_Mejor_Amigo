@@ -499,10 +499,15 @@ body {
 }
 @media screen and (max-width: 768px)
 {
+  body
+  {
+    height: var(--alto);
+    width: var(--ancho);
+  }
   .balloon
   {
     height: 15%;
-    width: 30%;
+    width: 25%;
   }
   .fondo .i-abpd
   {
@@ -531,16 +536,15 @@ body {
   }
   .cart
   {
-    height: 75%;
-    width: 55%;
+    height: 80%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
   }
   .cart .texto
   {
-    font-size: 16px;
+    font-size: 75%;
   }
   .globos_cart.active .i1
   {
