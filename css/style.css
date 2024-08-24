@@ -251,13 +251,13 @@ body {
 }
 .fondos_img
 {
+  position: absolute;
   opacity: 0;
   transition: 6s;
   transition-delay: 5s;
 }
 .fondos_img.active
 {
-  position: absolute;
   background-image: url('../img/fondo_16.jpg');
   height: 100%;
   width: 70%;
@@ -307,10 +307,11 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 100;
+  z-index: 1;
 }
 .globos_cart .i1
 {
+  position: absolute;
   top: 0;
   left: 0;
   transition: 5s;
@@ -324,6 +325,7 @@ body {
 }
 .globos_cart .i2
 {
+  position: absolute;
   top: 0;
   left: 0;
   transition: 5s;
@@ -338,6 +340,7 @@ body {
 }
 .globos_cart .i3
 {
+  position: absolute;
   top: 0;
   left: 0;
   transition: 5s;
@@ -352,6 +355,7 @@ body {
 }
 .globos_cart .i4
 {
+  position: absolute;
   top: 100%;
   left: 0;
   transition: 5s;
@@ -366,6 +370,7 @@ body {
 }
 .globos_cart .i5
 {
+  position: absolute;
   top: 100%;
   left: 0;
   transition: 5s;
@@ -380,6 +385,7 @@ body {
 }
 .globos_cart .i6
 {
+  position: absolute;
   top: 100%;
   left: 0;
   transition: 5s;
@@ -394,6 +400,7 @@ body {
 }
 .globos_cart .i7
 {
+  position: absolute;
   top: 100%;
   left: 0;
   transition: 6s;
@@ -402,6 +409,7 @@ body {
 }
 .globos_cart .d1
 {
+  position: absolute;
   top: 0;
   right: 0;
   transform: translateY(-100%) translateX(150%);
@@ -416,6 +424,7 @@ body {
 }
 .globos_cart .d2
 {
+  position: absolute;
   top: 0;
   right: 0;
   transform: translateY(-100%) translateX(150%);
@@ -430,6 +439,7 @@ body {
 }
 .globos_cart .d3
 {
+  position: absolute;
   top: 0;
   right: 0;
   transform: translateY(-100%) translateX(150%);
@@ -444,6 +454,7 @@ body {
 }
 .globos_cart .d4
 {
+  position: absolute;
   top: 100%;
   right: 0;
   transform: translateY(100%) translateX(150%);
@@ -458,6 +469,7 @@ body {
 }
 .globos_cart .d5
 {
+  position: absolute;
   top: 100%;
   right: 0;
   transform: translateY(100%) translateX(150%);
@@ -472,6 +484,7 @@ body {
 }
 .globos_cart .d6
 {
+  position: absolute;
   top: 100%;
   right: 0;
   transform: translateY(100%) translateX(150%);
@@ -486,6 +499,7 @@ body {
 }
 .globos_cart .d7
 {
+  position: absolute;
   top: 100%;
   right: 0;
   transform: translateY(100%) translateX(150%);
@@ -494,6 +508,12 @@ body {
 }
 @media screen and (max-width: 768px)
 {
+  body
+  {
+    height: var(--alto);
+    width: var(--ancho);
+    overflow: hidden;
+  }
   .balloon
   {
     height: 20%;
@@ -501,7 +521,7 @@ body {
   }
   .fondo .texto
   {
-    transform: scale(0.8);
+    transform: scale(50%);
     z-index: 2;
   }
   .cart
