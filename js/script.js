@@ -19,10 +19,13 @@ setTimeout(function(){
     globos_cart.classList.add('active');
     escribir();
 },3500);
-
+setTimeout(function(){
+    const audio = document.getElementById('Musica');
+    audio.volume = 0.5;
+    audio.play();
+},4000);
 function escribir() {
     const container = document.getElementById("texto");
-    const audio = document.getElementById('Musica');
     const texto = container.innerHTML
     container.innerHTML = "";
     let index = 0;
@@ -51,10 +54,6 @@ function escribir() {
                 return; // Salir de typeSegment para esperar que typeChar termine
             }
             typeSegment(segmentIndex + 1);
-        }else
-        {
-            audio.volume = 0.5;
-            audio.play();
         }
     }
     typeSegment(0);

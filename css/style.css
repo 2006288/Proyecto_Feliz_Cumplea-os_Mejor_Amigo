@@ -257,7 +257,6 @@ body {
   position: absolute;
   opacity: 0;
   transition: 6s;
-  transition-delay: 5s;
   overflow: hidden;
 }
 .fondos_img.active
@@ -638,7 +637,7 @@ body {
   }
   @keyframes cambioImagenP{
     0%{
-      
+      background-image: url('../img/fondo_pantalla_1.jpg');
     }
     10%{
       background-image: url('../img/fondo_pantalla_2.jpg');
