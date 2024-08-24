@@ -1,13 +1,3 @@
-window.addEventListener("resize", anchoPagina);
-
-function anchoPagina(){
-    var anchoVentana = window.innerWidth;
-    var altoVentana = window.innerHeight;
-    if(window.innerWidth < 768){
-        var Base = document.getElementById('Base');
-        Base.setAttribute("style",`--alto:${altoVentana}px; --ancho:${anchoVentana}px;`);
-    }
-}
 setTimeout(function(){
     const fondo = document.getElementById('fondo');
     const cart = document.getElementById('cart');
@@ -59,4 +49,3 @@ function escribir() {
     }
     typeSegment(0);
 }
-anchoPagina();
