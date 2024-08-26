@@ -247,7 +247,7 @@ body {
 .cart .texto
 {
   color: #fbbf24;
-  font-size: 17px;
+  font-size: 14px;
   text-shadow: 1px 1px #451a03,
   -1px -1px black,
   0 0 5px black;
@@ -543,7 +543,7 @@ body {
   }
   .cart .texto
   {
-    font-size: 75%;
+    font-size: 60%;
   }
   .globos_cart.active .i1
   {

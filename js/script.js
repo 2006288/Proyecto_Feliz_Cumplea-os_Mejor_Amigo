@@ -23,7 +23,7 @@ setTimeout(function(){
     const audio = document.getElementById('Musica');
     audio.volume = 0.5;
     audio.play();
-},4000);
+},5000);
 function escribir() {
     const container = document.getElementById("texto");
     const texto = container.innerHTML
